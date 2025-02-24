@@ -1,0 +1,162 @@
+.sp-w-full {
+    width: 100%;
+  }
+  
+  .sp-h-screen {
+    height: 100vh;
+  }
+  
+  .sp-bg-gradient-kashmir {
+    background: linear-gradient(to bottom, #746d9f, #110845c5);
+  }
+  
+  .sp-bg-gradient-spain {
+    background: linear-gradient(to bottom, #96c1b8, #719c91);
+  }
+  
+  .sp-header {
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 1rem;
+  }
+  
+  .sp-button {
+    padding: 0.625rem 1.5rem;
+    border-radius: 1.5rem;
+    font-weight: 100;
+    letter-spacing: 0.125em;
+    border: none;
+  }
+  
+  .sp-active {
+    background-color: white;
+    color: black;
+  }
+  
+  .sp-inactive {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    transform: scale(0.9);
+  }
+  
+  .sp-main-content {
+    height: 60vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+  
+  .sp-left-section, .sp-right-section {
+    overflow: hidden;
+    width: fit-content;
+
+  }
+  
+  .sp-product-title {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 0.1875rem;
+
+  }
+  .sp-product-image{
+    width: 50%;
+    overflow: hidden;
+    height: auto;
+    margin-left: 5%;
+
+  }
+  .sp-product-description,
+  .sp-product-content {
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    margin-top: 1.25rem;
+  }
+  
+  .sp-weights {
+    margin-top: 1rem;
+  }
+  
+  .sp-weight-button {
+    border: none;
+    font-weight: bold;
+    height: 60px;
+    width: 60px;
+    border-radius: 9999px;
+    margin-left: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sp-weight-active {
+    background-color: teal;
+    color: white;
+  }
+  
+  .sp-stock-info {
+    margin-top: 1.25rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .sp-right-column {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+  }
+  
+  .sp-quantity-controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 1rem;
+    justify-content: center;
+    width: 10vw;
+    align-items: center;
+  }
+  .sp-switch-product{
+    background-color: rgba(255, 255, 255, 0.642);
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+  }
+  .sp-quantity-button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 0.2rem;
+    border: none;
+  }
+  
+  .sp-quantity-display {
+    font-size: 1.5rem;
+  }
+  
+  .sp-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  
+  .sp-footer-button {
+    padding: 1rem 2rem;
+    font-weight: 100;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 2rem;
+  }
+  
+  .sp-product-price {
+    font-size: 2rem;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+  }
+  

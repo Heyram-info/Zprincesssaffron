@@ -1,0 +1,270 @@
+.mu_main>h1{ 
+     font-size: 4.5rem;
+    letter-spacing: 1rem;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.264); 
+    color: white;
+}
+.para_bold{
+    
+}
+.mu_div1 h1{
+    letter-spacing: 0.5rem; 
+}
+.mu_main>div{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.mu_main>div>h1{
+    font-size: calc(2rem + 2vw);
+    font-weight: 100;
+    letter-spacing: 1px;
+    color: white;
+    letter-spacing: 0.3rem;
+    transform: translateY(-100px);
+   text-align: center;
+   width: 100%;
+  
+}
+.mu_main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+    background-position: top;
+    background-size: cover;
+    cursor: url('../assets/cursor.png');
+}
+.mu_div1 p{
+    color: black;
+    line-height: 25px;
+
+}
+.mu_div1>h1{
+ text-align: center;
+ text-transform: uppercase;
+ margin-bottom: 1.5rem;
+ font-size: 1.5rem;
+ 
+}
+.mu_div1>p{
+    width: 60%;
+    text-align: center;
+    line-height: 1.9230769231;
+    letter-spacing: 0.0484615385em;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: bold;
+    
+}
+.mu_div1>div>h1{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+   
+}
+.mu_div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.mu_div1>div{
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.mu_div1>div>h1{
+    margin-bottom: 3vh;
+}
+.mu_div1>div>p{
+    line-height: 1.9230769231;
+    letter-spacing: 0.0484615385em;
+    font-size: 0.8rem;
+    width: 60%;
+    text-align: center;
+    font-weight: 100;
+    color: rgb(44, 44, 44);
+}
+.mu_main{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+.radio_btton_mu{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio_btton_mu>div{
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+
+}
+.culinary_div21-h1.true{
+    color: rgb(3, 3, 3);
+    font-weight: bold;
+    background-color: rgb(231, 248, 250);;
+}
+.culinary_div21-h1{
+}
+.radio_mu_div2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.radio_mu_div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.radio_mu_div1>img{
+    width: 60vw;
+    opacity: 60%;
+
+
+}
+.radio_mu_div2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.radio_mu_div2>p{
+    height: fit-content;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+    transition:  background-color 0.3s ease-in-out;
+    
+
+
+
+
+}
+.radio_btn_mu.true{
+    /* background-color: rgba(122, 209, 224, 0.651); */
+    background-color: rgb(226, 243, 249);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+
+}
+.mu_div1{
+    transition: all 0.5s ease-in-out;
+    padding-bottom: 5rem;
+
+
+}
+
+
+.medicinal_highlighter{
+    text-transform: capitalize;
+   
+}
+/* //////////depression///////////// */
+.mu_div1.depression{
+    background-color: rgb(231, 248, 250);
+
+}
+.radio_btton_mu.depression{
+    background-color: rgb(231, 248, 250);
+}
+
+/* //////////health///////////// */
+.mu_div1.health{
+    background-color: rgb(231, 248, 250);
+}
+.radio_btton_mu.health{
+    background-color: rgb(231, 248, 250);
+}
+
+/* //////////pain///////////// */
+.mu_div1.pain{
+    background-color: rgb(231, 248, 250);
+}
+.radio_btton_mu.pain{
+    background-color: rgb(231, 248, 250);
+}
+/* //////////digestive///////////// */
+.mu_div1.digestive{
+    background-color: rgb(231, 248, 250);
+}
+.radio_btton_mu.digestive{
+    background-color: rgb(231, 248, 250);
+}
+
+@media only screen and (max-width: 480px) {
+    .mu_main>h1{
+        font-size: calc(1rem + 2vw);
+        letter-spacing: 2px;
+    }
+    .mu_main>div>h1{
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+    }
+
+    .radio_btton_mu{
+        height: 15vh;
+    }
+    .radio_btton_mu>div{
+        width: 95vw;
+        height: 40px;
+       
+    
+    }
+    
+.mu_div1 p{
+    font-size: 0.6rem;
+    color: rgba(84, 84, 84, 0.838);
+    line-height: 15px;
+    width: 90%;
+    font-weight: bold;
+}
+.mu_div1 h1{
+    font-size: 1rem;
+    color: black;
+    letter-spacing: 2px;
+    width: 90%;
+    text-align: center;
+
+}
+.mu_div1>div>h1{
+    font-size: 0.8rem;
+
+}
+.mu_div1>div>p{
+    font-size: 0.6rem;
+    width: 90%;
+    ;line-height: 15px;
+    color: rgba(84, 84, 84, 0.838);
+    margin-bottom: 15px;
+    font-weight: bold;
+
+
+}
+    
+}

@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Archivo+Black&family=Artifika&family=IM+Fell+English+SC&family=Rakkas&display=swap');
+@font-face {
+  font-family: 'Riviera Nights';
+  src: url('../fonts/RivieraNightsTrial-Ultralight.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal; 
+} 
+ 
+
+
+.rrmc-cursor-icon.play{
+  background: url(../assets/curserpoint.png) ;
+}
+.rrmc-cursor-icon {
+
+
+}
+/* PlayButton.css */
+.containerv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  background: none;
+  position: absolute;
+  z-index: 6;
+}
+
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; 
+  border: 2px solid rgba(195, 216, 237, 0.5); /* Light blue border with transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90%;
+  background-color: rgba(205, 177, 205, 0.247);
+  color: rgba(173, 165, 165, 0.767);
+  font-weight: bold;
+
+}
+ 
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid rgba(98, 131, 167, 0.8); /* Triangle color similar to the play symbol */
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  margin-left: 4px; /* Offset to position the triangle inside the circle */
+}
+.mainpage_main{
+  width: 100vw;
+  font-family: 'Riviera Nights';
+    font-optical-sizing: auto;
+    font-style: normal;
+    overflow-x: hidden;
+    background-color: rgb(254, 236, 255);
+    position: relative;
+}
+
+.recommender-test {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust height as needed */
+  background-image: url('../../src/images/pngegg.png'); /* Add your image URL here */
+  transform: scaleX(-1);
+  background-size: cover; /* Make sure the image covers the entire box */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent background image repeating */
+  cursor: pointer; /* Add a pointer on hover to indicate it's clickable */
+  opacity: 0.9; /* Slight transparency */
+  margin-right: -30px;
+}
+
+.recommender-test:hover{
+  width: 90px; /* Adjust size as needed */
+  height: 90px;
+}
+
+.bot-text {
+  position: fixed;
+  top: 48%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 100px; /* Adjust size as needed */
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background: #000;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+
+.left-side {
+  position: fixed;
+  top: 48%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 100px; /* Adjust size as needed */
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 1px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background: #000;
+  color: white;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.right-side {
+  position: fixed;
+  top: 48%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 60;
+  width: 100px; /* Adjust size as needed */
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  background: #000;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+
+.mainpage_container{
+  width: 100vw;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    
+
+  }
+  .flying{
+    cursor: url('../assets/curserpoint.png'), auto;
+  }
+  .video-container>video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+/* ///////////////////////////////////////// */
+
+.mainpagecon{
+  width: 100vw;
+  height: 200vh;
+  position: relative;
+}
+.mainpagecon.true{
+  height: 180vh;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.mainpage_con1{
+  height: 100vh; 
+  position: absolute;
+}
+.viewall_pro{
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.viewall_pro>p{
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  padding: 10px;
+}
+
+.mainpage_con2{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 100vh;
+}
+
+.mainpage_con212{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  
+}
+.mainpage_con212.true{
+  opacity: 1;
+  width: 100vw;
+  
+}
+
+/* //////////////////////////////////////// */
+.line_l{
+  height: 0.5px;
+  margin-bottom: 10px;
+  width: 250px;
+  opacity: 0;
+  background-color: rgba(238, 222, 52, 0.578);
+}
+.line_l.true{
+  opacity: 1;
+}
+.mainpage_div {
+    position: relative;
+    z-index: -1;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+    z-index: 2;
+    width: 100%;
+    
+    height: 100%; 
+   
+  }
+  .mainpage_div1{
+    letter-spacing: .8rem;
+    opacity: 0;
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: thin;
+    font-family: 'Riviera Nights';
+    transition: all 0.3s ease-in-out;
+    transform: translateY(30px);
+  }
+.mainpage_div1.true{
+  opacity: 1;
+  transform: translateY(0);
+
+
+
+}
+.mainpage_div1.false{
+  opacity: 0;
+  transform: translateY(30px);
+
+
+
+}
+  .mainpage_div2{
+    font-size: 0.9rem;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(30px);
+    opacity: 0;
+    text-transform: uppercase;
+    font-weight: 100;
+    letter-spacing: 0.2rem;
+    
+  }
+  .mainpage_div2.true{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .mainpage_div2.false{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .mainpage_div3{
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    transform: translateY(30px);
+    margin-top: 1rem;
+    opacity: 0;
+  }
+  .mainpage_div3.true{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+  .mainpage_div3.false{
+    opacity: 0;
+    transform: translateY(30px);
+
+  }
+  .mainpage_div3>button{
+    padding: 15px 35px;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 0.8rem;
+  }
+
+  .mainpage_div3 a{ 
+    text-decoration: none;
+  }
+
+  .our_products{
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Riviera Nights';
+
+    font-size: calc(1.5rem + 1.5vw);
+    color: rgba(0, 0, 0, 0.819);
+    letter-spacing: 1.5px;
+    font-size: 3rem;
+  }
+  .View_all{
+    width: 100vw;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+  }
+  .View_all>button{
+    padding: 15px 25px;
+    border: 1px solid rgb(9, 58, 28);
+    background:none;
+    letter-spacing: 1px;
+    color: rgb(31, 31, 31);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    border-radius: 1px;
+    flex-direction: row;
+
+
+  }
+  .View_all>button:hover{
+    background-color: black;
+    color: white;
+  }
+  .quate1{
+    background-color: rgb(234, 203, 242);
+    text-align: center;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+  }
+
+.bag{
+  font-size: 20px;
+  margin: 2px;
+}
+
+
+.quate1>p{
+  font-size: calc(1.5rem + 1.5vw);
+  color: rgba(0, 0, 0, 0.649);
+  letter-spacing: 1.5px;
+  font-family: "Raleway", sans-serif;
+  
+
+
+
+}
+.review-bottom{
+  background-color: rgb(213, 228, 234);
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  padding: 2rem 0;
+  flex-direction: column;
+  align-items: center;
+  text-transform: capitalize;
+  gap: 0.5rem;
+  letter-spacing: 1.5px;
+}
+.review-bottom>button{
+
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: white;
+  border: none;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+
+}
+.review-bottom>button:hover{
+  scale: 102%;
+}
+
+.mainpage_end1{
+  float: left;
+  padding: 20px;
+  width: 40%;
+  height: fit-content;
+  display: flex;
+  justify-content: left;
+  align-items: start;
+  flex-direction: row;
+}
+.mainpage_end1_1,.mainpage_end1_2{
+  float: left;
+  margin-top: 10px;
+  color: white;
+  
+}
+.mainpage_end11{
+  width: 25vw;
+  transition: all 0.1s ease;
+  
+
+}
+
+
+.mainpage_end1_2{
+  font-size: small;
+  text-align: left;
+  line-height: 120%;
+}
+.mainpage_end1_1{
+  letter-spacing: 1px;
+  font-size: large;
+}
+.mainpage_end1_1{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.mainpage_end12{
+ height: 100px;
+ display: flex;
+ align-items: end;
+ font-size: 20px;
+}
+
+.I_class{
+  margin-right: 5px;
+  color: rgb(181, 0, 0);
+  font-size: 30px;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.baseDiv {
+  width: 100%;
+}
+
+.overlayDiv {
+  position: absolute;
+  top: 0; /* Adjust this value as needed */
+  left: 0; /* Adjust this value as needed */
+}
+/* //////////////////////// */
+
+
+/* src/VideoBackgroundText.css */
+
+
+
+/* /////////////////////////// */
+.footer_plus{
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+
+}
+.d_uses{
+  text-align: center;
+  margin-top: 10vh;
+  font-size: 3rem;
+  padding: 10px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  color: rgb(38, 70, 52);
+  
+}
+.mainpagetrialdiv{
+    padding-top: 5%;
+    background:none;
+   
+}
+
+
+.parallax-item {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: bold;
+    font-family: Montserrat, sans-serif;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  }
+  * {
+    padding: 0;
+    margin: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  .parallax-item h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-left: 5%;
+    color: white;
+    letter-spacing: 2px;
+    text-shadow:  2px 2px 2px rgba(0,0,0,0.4);
+  }
+
+  .parallax-item >button{
+    margin-left: 7%;
+    padding: 15px 35px;
+    margin-top: 60px;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+  }
+  .parallax-item:first-child {
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-position: center center ;
+  }
+  
+  .parallax-item:nth-child(2) {
+  }
+  
+  .parallax-item:nth-child(3) {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax Effect for DIV 3 */
+  }
+  
+  .parallax-item:nth-child(4) {
+    background: #1565c0;
+  }
+  #banner{
+    background-position:center;
+    background-size: cover;
+
+  }
+  
+  @media screen and (max-width: 768px) {
+    .parallax-item h2 {
+      font-size: 1.5rem;
+    }
+  }
+#banner h2, p{
+  color: rgb(8, 87, 13);
+  text-shadow: none;
+}
+#banner p{
+  color: rgb(255, 255, 255);
+}
+#banner_about{
+  background-position:center;
+  background-size: cover;
+  height: 110vh;
+}
+.arrow_right{
+  font-size: 20px;
+}
+.first_discover{
+  color: rgb(9, 91, 19);
+}
+#first_discover{
+  color: rgb(154, 109, 205);
+
+}
+#first_journy{
+  color: rgb(255, 255, 255);
+  font-weight: 400;
+  font-size: large;
+}
+
+
+
+/* ///////////////////////// */
+
+.our_productback{
+  width: 100vw;
+  height: 100vh;
+  background-position: center center;
+  background-size: cover;
+}
+
+#parallax_unique{
+  height: 60vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+}
+.parallax_div1{
+  height: 100%;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.373);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.parallax_div1>h1{
+  letter-spacing: .8rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: white;
+  font-family: 'Riviera Nights';
+}
+.parallax_div1>button{
+  padding: 15px 45px;
+  border-radius: 35px;
+  letter-spacing: 2px;
+  border: none;
+  background-color: white;
+  color: rgb(0, 0, 0);
+
+}
+@font-face {
+  font-family: 'Riviera Nights';
+  src: url('../fonts/RivieraNightsTrial-Ultralight.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.setus{
+  width:100%;
+  font-family: 'Riviera Nights';
+}
+.setus_div1{
+  text-align: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+  font-size: calc(0.256rem + 2vw);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.setus_div2{
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  display: flex;
+  align-items: start;
+  gap: 100px;
+  padding: 3%;
+
+}
+.setus_div2>div{
+  width: 30%;
+  overflow: hidden;
+}
+.setus_div2 div h1{
+  font-size: calc(0.0066rem + 1.5vw);
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.setus_div2 div p{
+  color: rgb(42,42,42);
+  line-height: 1.9230769231;
+  letter-spacing: 0.0684615385em;
+  font-size: 0.8rem; 
+  font-weight: 100;
+}
+.parallax_div1>p{
+  line-height: 1.9230769231;
+  letter-spacing: 0.0484615385em;
+  font-size: 3rem; 
+   text-transform: uppercase;
+  color: white;
+  font-family: 'Riviera Nights';
+}
+
+
+/* //////////////////mobile responsive/////////////////// */
+
+@media only screen and (max-width: 480px) {
+  .mainpage_div1{
+    letter-spacing: 0.35rem;
+    text-transform: uppercase;
+    font-size: calc(2vw + 0.8rem);
+    color: white;
+    font-weight: 600;
+    font-family: 'Riviera Nights';
+  }
+  .mainpage_div2{
+    font-size: 0.6rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    
+  }
+  .mainpage_div3{
+  }
+  .line_l{
+    width: 30%;
+  }
+  .mainpagetrialdiv{
+    height: fit-content;
+    padding-top: 5%;
+   
+}
+.setus_div1{
+  font-size: 1rem;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+.setus_div2 div h1{
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom:10px ;
+  letter-spacing:1.5px;
+}
+.setus_div2{
+  gap: 30px;
+
+}
+.setus_div2>div{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.setus_div2 div p{
+  font-size: 0.65rem;
+  color: rgba(84, 84, 84, 0.838);
+  font-weight: bold;
+}
+.setus_div2{
+  flex-direction: column;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+.setus_div2 div p{
+  width: 90%;
+  letter-spacing: 0.8px;
+  line-height: 18px;
+}
+.mainpage_div3>button{
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  letter-spacing: 2px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 0.5rem;
+}
+ 
+}

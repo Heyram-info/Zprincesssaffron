@@ -1,0 +1,197 @@
+.footer_main{
+    background-color: rgb(38, 30, 61);
+    padding: 3rem 0 5rem 0;
+    font-family: 'Riviera Nights';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-div1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+.footer-div1>div{
+    color: rgb(221, 221, 221);
+    font-size: calc(0.267rem + 0.7vw);
+    letter-spacing: 0.1rem;
+}
+.footer-div2{
+    background-color: rgb(113, 108, 108);
+    height: 0.004rem;
+    width: 85%;
+}
+.footer-div31{
+    display: flex;
+    flex-direction: row;
+    float: left;
+    gap: 9vw;
+}
+.footer_div22{
+    width: 30%;
+}
+.footer-div31>div>div{
+    color: white;
+    margin: 0.9rem 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: calc(0.10rem + 0.6vw);
+}
+
+.footer-div3{
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 0;
+    overflow: hidden;
+
+}
+.fontinsta{
+    font-size: 1rem;
+}
+.fontwa{
+    font-size:1.4rem ;
+}
+.fontx{
+    font-size: 1.2rem;
+}
+
+.footer-div32{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.442);
+    font-size: 1.2rem;
+    padding-left: 0rem;
+    overflow: hidden;
+
+}
+.footer-div32>span{
+    width: 40px;
+    height: 28px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.corporate-essentials{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    overflow: hidden;
+
+}
+.liscence-con{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: fit-content;
+    width: 400px;
+    height: 0;
+    transition: height 0.5s ease;
+    overflow-y: hidden;
+}
+.liscence-con.true{
+    height:70px;
+    overflow: hidden;
+
+}
+.liscence-con>div{
+    overflow: hidden;
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .footer-div1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .footer-div1>div{
+        color: rgb(221, 221, 221);
+        font-size: calc(0.267rem + 1vw);
+        letter-spacing: 0.1rem;
+    }
+    .footer-div2{
+        background-color: rgb(113, 108, 108);
+        height: 0.004rem;
+        width: 90%;
+    
+    }
+    .footer-div31{
+        display: flex;
+        flex-direction: row;
+        float: left; 
+        gap: 10px;
+        width: 70%;
+    }
+    .footer-div31>div>div{
+        color: white;
+        margin: 0.4rem 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+        font-size: calc(0.067rem + 1vw);
+    }
+    
+    .footer-div3{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        padding: 1rem 0;
+        overflow: hidden;
+    
+    }
+    .footer-div32{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        color: gray;
+        width: 20%;
+        font-size: 9px;
+        overflow: hidden;
+    
+    }
+    .corporate-essentials{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        overflow: hidden;
+    
+    }
+    .liscence-con{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        width: fit-content;
+        width: 100px;
+        height: 0;
+        transition: height 0.5s ease;
+        overflow-y: hidden;
+    }
+    .liscence-con.true{
+        height:70px;
+        overflow: hidden;
+    
+    }
+    .liscence-con>div{
+        overflow: hidden;
+        font-family: "Roboto", system-ui;
+        font-weight: 300;
+    
+    }
+  
+
+}

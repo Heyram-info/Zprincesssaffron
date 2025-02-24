@@ -1,0 +1,307 @@
+.pu_div1{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center; 
+
+ 
+}
+.pu_div1>div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.299);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pu_div1>div>h2{
+    font-weight: 100;
+    font-size: 4.5rem;
+    letter-spacing: 0.3rem;
+    color: white;
+}
+.pu_div1>div>p{
+    font-family: 100;
+    font-size: 0.8rem;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: white;
+}
+
+.pu_div1>h1{
+    color: white;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
+}
+.pu_main h1{
+    letter-spacing: 0.5rem;
+}
+.pu_main{
+    background-color: rgb(254, 236, 255)
+}
+.pu_div2 p,.pu_div4 p{
+    color: rgb(0, 0, 0);
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    line-height: 25px;
+}
+.pu_div2 h1,.pu_div4 h1{
+    color: black;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+.pu_div1>h1{
+    font-size: 3.5rem;
+}
+.pu_div1>p{
+    width: 60%;
+    text-align: center;
+    color: white;
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+}
+.potential{
+    margin-top: 3rem;
+}
+.pu_div2>h1{
+    text-align: center;
+    font-size: calc(0.856rem + 1vw);
+    letter-spacing: 0.3rem;    text-transform: uppercase;
+}
+.pu_div2>div{
+    margin: 5vh 0 10vh 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pu_div2>div>h1{
+    text-transform: uppercase;
+    font-size: calc(0.256rem + 1vw);
+    letter-spacing: 0.3rem;
+ text-align: center;
+ margin-bottom: 1.5rem;
+}
+.pu_div2>div>p{
+    width: 60%;
+    line-height: 1.9230769231;
+    letter-spacing: 0.0484615385em;
+    font-size: 0.8rem;
+    word-spacing: 1.5px;
+    text-align: center;
+   
+}
+.pu_div4>h1{
+    text-align: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.pu_div4{
+}
+.pu_div4>div{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+
+
+}
+.pu_div4>div>div{
+    
+    width: 40%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.5rem;
+    margin-bottom: 5rem;
+
+
+}
+
+.pu_div4>div>div>p{
+    line-height: 1.9230769231;
+    letter-spacing: 0.0484615385em;
+    font-size: 0.8rem;
+    word-spacing: 1.5px;
+    text-align: center;
+    width: 80%;
+}
+
+.pu_div5>p{
+    width: 80%;
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 30px;
+    color: rgb(0, 0, 0);
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 0.9rem;
+    
+}
+.culinary_subheadings{
+    color: rgb(63, 63, 63);
+    text-transform: capitalize;
+    font-family: "Roboto", system-ui;
+    font-style: normal;
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+}
+
+.pu_div5{
+    display: flex;
+    justify-content: center;
+
+
+align-items: center;
+padding: 10vh 0;
+
+}
+.pu_img1{
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.pu_div4 h2{
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.3rem;
+}
+@media only screen and (max-width: 480px) {
+    
+.pu_main h1{
+    letter-spacing: 2px;
+    font-size: 1rem;
+}
+.pu_div1>div>h2{
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+
+}
+.pu_div1>div>p{
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+    width: 80%;
+    color: rgba(84, 84, 84, 0.838);
+
+
+}
+.pu_div2 p,.pu_div4 p{
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    line-height: 15px;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+.pu_div2 h1,.pu_div4 h1{
+    margin-bottom: 2px;
+}
+.pu_div1>h1{
+    font-size: 1.5rem;
+}
+.pu_div1>p{
+    width: 90%;
+    text-align: center;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    font-size: 0.8rem;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+
+.pu_div2>div>h1{
+    font-size: 0.8rem;
+}
+
+.pu_div2>div>p{
+    width: 90%;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    word-spacing: 1.5px;
+    font-size: 0.6rem;
+    line-height: 15px;
+    text-align: center;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+
+
+.pu_div4>h1{
+    text-align: center;
+    font-size: 1rem;
+}
+.pu_div4{
+    margin-top: 10px;
+}
+.pu_div4>div{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+
+
+
+}
+.pu_div4>div>div{
+    
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+
+}
+
+.pu_div4>div>div>p{
+    width: 90%;
+    text-align: center;
+    font-size: 0.6rem;
+    color: rgba(84, 84, 84, 0.838);
+
+   
+}
+.pu_div4>div>div>img{
+    width: 70%;
+    height: auto;
+   
+}
+.pu_div4>div>div>h2{
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+    margin: 0;
+    margin-bottom: 15px;
+   
+}
+.pu_div5{
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+   
+}
+.pu_div5>p{
+    font-size: 0.6rem;
+    line-height: 15px;
+    width: 90%;
+    margin: 5px 0;
+    letter-spacing: 1px;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+.pu_div2>div>p{
+    margin-bottom: 5px;
+
+}
+
+}

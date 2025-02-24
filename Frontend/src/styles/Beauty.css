@@ -1,0 +1,237 @@
+.beauty_main>h1{
+    letter-spacing: 0.5rem;
+
+}
+
+.beauty_div1 h1{
+    letter-spacing: 0.4rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+
+} 
+
+.beauty_main{ 
+   width: 100vw;  
+   height: 100vh;
+   background-position: center center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   
+}
+.culinary_div11>h1{
+    font-weight: 500;
+    letter-spacing: 0.3rem;
+
+    
+}
+.beauty_div1 p{
+    color: rgb(0, 0, 0);
+    line-height: 25px;
+    line-height: 1.9230769231;
+    letter-spacing: 0.0484615385em;
+    font-size: 0.8rem;
+
+}
+.beauty_div1>h1{
+ text-align: center;
+ text-transform: uppercase;
+ margin-bottom: 3vh;
+}
+.beauty_div1>p{
+    margin-bottom: 3rem;
+    width: 80%;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: bold;
+}
+.beauty_div1>div>h1{
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+}
+.beauty_div1>div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.beauty_div1>div>h1{
+    margin-bottom: 1.5rem;
+    margin-top: 20px;
+}
+.beauty_div1>div>p{
+    letter-spacing: 1.5px;
+    word-spacing: 2px;
+    width: 60%;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: rgb(44, 44, 44);
+}
+.radio_btton_beauty{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio_btton_beauty>div{
+    background-color: rgb(255, 255, 255);
+    width: 60vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.radio_beauty_div2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+}
+.radio_beauty_div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.radio_beauty_div1>img{
+    width: 60vw;
+    opacity: 40%;
+
+
+}
+.radio_beauty_div2{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.radio_beauty_div2>p{
+    height: fit-content;
+    padding: 5px 15px;
+    border-radius: 15px;
+    color: black;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+    transition:  background-color 0.3s ease-in-out;
+
+
+
+
+}
+
+.culinary_div21b-h1{
+    background-color: white;
+}
+.culinary_div21b-h1.true{
+    background-color: rgb(254, 236, 255);;
+}
+.beauty_div1{
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* ////////////////////brightning///////////////////// */
+.radio_btton_beauty.brightning{
+    background-color: rgb(254, 236, 255)
+}
+.beauty_div1.brightning{
+    background-color: rgb(254, 236, 255)
+}
+/* ////////////////////antiaging///////////////////// */
+.radio_btton_beauty.antiaging{
+    background-color: rgb(254, 236, 255)
+}
+.beauty_div1.antiaging{
+    background-color: rgb(254, 236, 255)
+}
+/* ////////////////////skintone///////////////////// */
+.radio_btton_beauty.skintone{
+    background-color: rgb(254, 236, 255)
+}
+.beauty_div1.skintone{
+    background-color: rgb(254, 236, 255)
+}
+/* ////////////////////acne///////////////////// */
+.radio_btton_beauty.acne{
+    background-color: rgb(254, 236, 255)
+}
+.beauty_div1.acne{
+    background-color: rgb(254, 236, 255)
+}
+@media only screen and (max-width: 480px) {
+    
+.radio_btton_beauty{
+    height: 15vh;
+}
+.radio_btton_beauty>div{
+    width: 95vw;
+    height: 40px;
+
+}
+.radio_btton_beauty>div>h1{
+    font-size: calc(0.25rem + 1vw);
+
+
+}
+
+.beauty_div1 p{
+    line-height: 15px;
+    margin-bottom: 5px;
+    width: 95%;
+    font-size: 0.6rem;
+    text-align: center;
+
+}
+.beauty_div1>h1{
+ margin-bottom: 5px;
+ font-size: 1rem;
+ letter-spacing: 2px;
+ margin-bottom: 15px;
+
+}
+.beauty_div1>p{
+    margin-bottom: 5px;
+    width: 90%;
+    font-size: 0.6rem;
+    text-align: center;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+.beauty_div1>div>h1{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+
+}
+.beauty_div1>div>p{
+    letter-spacing: 1px;
+    word-spacing: 1.5px;
+    width: 90%;
+    margin-bottom: 5px;
+    text-align: center;
+    color: rgba(84, 84, 84, 0.838);
+
+}
+.beauty_div1>div>h1{
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+}

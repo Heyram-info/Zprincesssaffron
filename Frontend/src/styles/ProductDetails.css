@@ -1,0 +1,962 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+.product-details{
+  width: 100vw;
+  position: relative;
+  height: 400vh;
+  background-color: rgb(255, 255, 255);
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.pd-right{ 
+  top: 0;
+  right: 0;
+  position: fixed;
+  height: 100vh;
+  width: 48vw;
+  background-color: rgb(255, 255, 255);
+  font-family: "Louis Vuitton Web", "Louis Vuitton Web Fallback", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  overflow: hidden;
+}
+.pd-right.true{
+  top: 300vh;
+  right: 0;
+  position: absolute;
+  width: 50vw;
+
+
+
+}
+.pd-left{
+  height: 100%;
+  width: 50vw;
+  background-color: rgb(178, 62, 62);
+
+}
+.pd-left-1{
+  background-color: rgb(233, 233, 224);
+  width: 50vw;
+  height: 100vh;
+}
+.pd-left-2{
+  background-color: rgb(190, 237, 224);
+  width: 50vw;
+  height: 100vh;
+}
+.pd-left-3{
+  background-color: rgb(206, 206, 121);
+  width: 50vw;
+  height: 100vh;
+}
+.pd-left-4{
+  background-color: rgb(197, 176, 211);
+  width: 50vw;
+  height: 100vh;
+}
+.pd-review-box{
+  background-color: aliceblue;
+  /* height: 50vh; */
+  width: 100%;
+}
+.pd-rightdetails{
+  padding: 20% calc(15% + 1vw) 0 calc(15% + 1vw);
+}
+.pd-rightdetails>h1{
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+.pd-rightdetails>p{
+  color: black;
+  font-size: large;
+  margin-top: 0.5rem;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 350;
+  font-size: .875rem;
+
+}
+.font-tax{
+  font-size: 0.70rem;
+  letter-spacing: 1px;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+
+}
+.pd-star-rating{
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pd-star-rating span { 
+  font-size: 13px;
+}
+.change-grams{
+  padding: 1rem 0;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.351);
+  display: flex;
+  justify-content: space-between;
+}
+.change-grams>h2,.change-grams>div>h2,.change-grams>div>h3{
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+
+}
+.change-grams>div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+}
+.change-grams>div>h3{
+  margin-top: 3px;
+
+}
+.pd-button{
+  display: flex;
+flex-direction: row;
+padding: 2rem;
+gap: 2rem;
+}
+.pd-button>button{
+  width: fit-content;
+  padding: 9px 18px;
+ border: none;
+ border-radius: 25px;
+ color: white;
+ background-color: black;
+ letter-spacing: 1px;
+   font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 0.8rem;
+}
+.pd-right_belowitems{
+  padding: 2rem 0;
+
+}
+.pd-right_belowitems>h3{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  padding: 0px 2px;
+
+}
+.pd-right_belowitems>h3:hover{
+  scale: 101%;
+}
+.item_added{
+  opacity: 0.3 !important;
+}
+
+
+
+
+/* // */
+
+
+.pd-right_belowitems>ul { 
+  padding: 0; 
+  list-style: none; 
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: start;
+  
+}
+.pd-right_belowitems li { 
+  display: table-cell; 
+  position: relative; 
+  margin-top: 5px;
+  
+}
+.pd-right_belowitems a {
+  color: #000000;
+  text-transform: capitalize;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-size: 0.65rem;
+  
+  display: inline-block;
+  position: relative;
+  
+}
+.pd-right_belowitems a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0; 
+  content: "";
+  display: block;
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  background: #000000;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.pd-right_belowitems a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+/* reviews */
+
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  background-color: #f7f7f7;
+  font-family: "Jost";
+}
+
+.ratings-overview {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.ratings-overview .top-section { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-button {
+  padding: 10px 30px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 11px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ratings-overview h2 {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.review-line {
+  margin: 20px 0px;
+}
+
+/* Layout for ratings content: average rating and progress bars side by side */
+.ratings-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  
+}
+
+.average-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.average-stars h3 {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.average-stars p {
+  color: #ffcc00;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-reviews {
+  font-size: 0.7rem;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost";
+}
+
+.rating-bars {
+  flex-grow: 1;
+  border-left: 1.2px solid rgb(156, 155, 155);
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+.rating-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-label {
+  width: 80px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  height: 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffcc00;
+  border-radius: 5px;
+}
+
+.rating-count {
+  width: 80px; /* Ensures the rating count is visible and doesn't get cut off */
+  color: #555;
+  font-size: 0.9rem;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-list {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Jost";
+}
+
+.reviews-list h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 20px;
+}
+
+
+.review-item {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.review-item h3 {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.review-data .review-icon {
+  color: rgba(78, 78, 78, 0.858);
+  padding-top: 5px;
+}
+
+.review-data {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.review-icon {
+  margin-right: 16px;
+}
+
+.review-text {
+  flex: 1;
+}
+
+.user-review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.reviewer-name {
+  font-size: 0.8rem;
+  color: #1f1f1f;
+  font-family: "Jost";
+  letter-spacing: 1px;
+}
+
+.review-star {
+  color: #ffd700; /* Gold color for stars */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-star .review-value{
+  color: black;
+  font-family: "Jost";
+  font-size: 12px;
+}
+
+.review-content {
+  margin-top: 5px;
+  font-size: 15px;
+  color: #555;
+  letter-spacing: 1px;
+}
+
+
+/* review popup */
+
+.review-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 30;
+}
+
+.review-popup .pb-rating {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pb-rating label {
+  letter-spacing: 1.2px;
+}
+
+.review-popup textarea { 
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 5px 10px;
+}
+
+.review-form {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  padding: 20px;
+}
+
+.review-form h3{
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* padding-bottom: 10px; */
+  font-size: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0px;
+  padding-top: 10px;
+}
+
+.form-buttons .sr-button { 
+  padding: 10px 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-buttons .cr-button { 
+  padding: 10px 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.error-message {
+  color: red;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 30;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+
+  .product-details{
+    
+    position: static;
+    height: fit-content;
+    
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  .pd-right{
+    top: 0;
+    right: 0;
+    position: static;
+    height: fit-content;
+    width: 100vw;
+    background-color: rgb(255, 255, 255);
+    font-family: "Louis Vuitton Web", "Louis Vuitton Web Fallback", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  
+  }
+  .pd-right.true{
+    top: 0;
+    right: 0;
+    position:static ;
+    width: 100vw;
+  
+  
+  
+  }
+  .pd-left{
+    height: 50vh;
+    width: fit-content;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    overflow: scroll;
+    position: relative;
+    margin-top: 10vh;
+    background-color: #333;
+  
+  }
+  .pd-left-1{
+    background-color: rgb(233, 233, 224);
+
+  }
+  .pd-left-2{
+    background-color: rgb(190, 237, 224);
+   
+  }
+  .pd-left-3{
+    background-color: rgb(206, 206, 121);
+ 
+  }
+  .pd-left-4{
+    background-color: rgb(197, 176, 211);
+ 
+  }
+
+  .pd-rightdetails{
+    padding: 20px
+  }
+  .pd-rightdetails>h1{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .pd-rightdetails>p{
+    color: black;
+    margin-top: 0.3rem;
+ 
+    font-size: 0.8rem;
+  }
+  .font-tax{
+    font-size: x-small;
+    letter-spacing: 1px;
+    font-family: "Jost", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+  
+  }
+  .pd-star-rating{
+    margin-top: 0.3rem;
+  
+  }
+  .pd_slider{
+
+  }
+  .pd_slider>div{
+    color: black;
+    background-color: #333;
+    height: 60vh;
+    position: static;
+
+  }
+  .pd_slider>div>h3{
+  }
+  a {
+    color: #000000;
+    text-transform: capitalize;
+    text-decoration: none;
+    letter-spacing: 0.10em;
+    font-size: 0.5rem;
+    
+    display: inline-block;
+    position: relative;
+    
+  }
+  /* //reviews// */
+
+  
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+}
+.sliderrdiv{
+  height: 70vh;
+}
+.ratings-overview {
+  background-color: #fff;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px;
+}
+
+.ratings-overview .top-section { 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-button {
+  padding: 8px 15px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.ratings-overview h2 {
+  letter-spacing: 0.9px;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.review-line {
+  margin: 10px 0px;
+}
+
+/* Layout for ratings content: average rating and progress bars side by side */
+.ratings-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+
+  
+}
+
+.average-rating {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.average-stars h3 {
+  font-size: 1rem;
+  margin-right: 10px;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+}
+
+.average-stars p {
+  color: #ffcc00;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-reviews {
+  font-size: 0.7rem;
+  color: #555;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rating-bars {
+  flex-grow: 1;
+  padding-left: 0;
+  border: none;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.rating-progress {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.star-label {
+  width: 80px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.progress-bar {
+  flex-grow: 1;
+  background-color: #e0e0e0;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 10px;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #ffcc00;
+  border-radius: 5px;
+}
+
+.rating-count {
+  width: 80px; /* Ensures the rating count is visible and doesn't get cut off */
+  color: #555;
+  font-size: 0.9rem;
+  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviews-list {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 0;
+  box-shadow: none;
+  
+}
+
+.reviews-list h2 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+
+.review-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.review-item h3 {
+  letter-spacing: 1px;
+  font-size: 9px;
+}
+
+
+
+.review-data{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0;
+
+}
+
+.review-text .review-star{
+  padding: 0px 0px;
+}
+
+
+
+
+.review-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.review-item h3 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.review-item p {
+  margin: 0;
+  color: #555;
+}
+
+
+.reviewer-name {
+  font-size: 5px;
+  color: #1f1f1f;
+  font-family: "Jost";
+  letter-spacing: 1px;
+}
+
+.review-star {
+  color: #ffd700; /* Gold color for stars */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
+}
+
+.review-star .review-value{
+  color: black;
+  font-family: "Jost";
+  font-size: 10px;
+}
+
+
+.review-content {
+  margin-top: 0;
+  font-size: 10px;
+  color: #cb1818;
+  letter-spacing: 1px;
+  font-size: 10px;
+}
+.reviewer-name{
+  font-size: 11px;
+}
+
+
+/* review popup */
+
+.review-popup {
+  position: fixed;
+  top: 50vh;
+  left: 0%;
+  transform: translate(0, -50%);
+  margin: 5px;
+  background-color: white;
+  padding: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  width: 95vw;
+}
+
+.review-popup .pb-rating {
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pb-rating label {
+  letter-spacing: 1.2px;
+}
+
+.review-popup textarea { 
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 5px 10px;
+  width: 90%;
+}
+
+.review-form {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  padding: 20px;
+}
+
+.review-form h3{
+  font-weight: 500;
+  letter-spacing: 1px;
+  /* padding-bottom: 10px; */
+  font-size: 20px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 10px 0px;
+  padding-top: 10px;
+}
+
+.form-buttons .sr-button { 
+  padding: 10px 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-buttons .cr-button { 
+  padding: 10px 25px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  border-radius: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.error-message {
+  color: red;
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  letter-spacing: 1px;
+  font-size: 15px;
+}
+
+}

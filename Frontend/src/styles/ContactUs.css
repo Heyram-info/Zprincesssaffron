@@ -1,0 +1,238 @@
+.contact_div1{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-direction: column;
+ 
+}
+.contact_div11{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    height: 110vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1px;
+
+ 
+} 
+.contact_div11>img{
+    width: 100%;
+}
+.contact_div12{
+   
+    padding-top: 30vh;
+    padding-bottom: 10vh;
+    width: 100%;
+    height: 90%;
+    background-color: rgba(143, 143, 143, 0.245);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact_div12>h1{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+
+}
+.contact_div12>p{
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px;
+    letter-spacing: 1.5px;
+    gap: 5px;
+    font-weight: bold;
+    font-family: "Roboto", system-ui;
+    font-weight: 300;
+
+}
+.fontsaligh{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: calc(0.2rem + 1.5vw);
+    margin-top: calc(0.5rem + 1.5vw);
+    color: rgb(44, 44, 44);
+}
+.contact_div121{
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    width: 100vw;
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #ffffff68;
+    backdrop-filter: blur(100px);
+    transition: all 0.3s ease-in-out;
+
+}
+.contact_div121.true{
+    height: 100vh;
+    opacity: 1;
+
+  
+
+}
+
+.contact_div121_close{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    background-color: #dce7ecb7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    backdrop-filter: blur(100px);
+
+}
+.contact_div121_1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items:  center;
+}
+.contact_div121_1>input.contact-input{
+    width: 400px;
+    height: 40px;
+    border-radius: 0;   
+     font-family: "Jost", sans-serif;
+     font-size: 0.8rem;
+
+
+    border: none;
+    padding: 5px 10px 0 10px;;
+
+
+    border-bottom: 1px solid gray;
+    padding-left: 10px;
+    outline: none;
+    letter-spacing: 1px;
+
+
+    background-color: rgba(223, 223, 223, 0);
+}
+.contact_div121_1>input.contact-input.true{
+    border-bottom: 1px solid rgb(216, 58, 58);
+
+}
+.contact_div121_1>input:active{
+    color: black;
+}
+.contact_div121_1 .contact-textarea{
+    width: 400px;
+    border: none;
+    border-bottom: 1px solid gray;
+    letter-spacing: 1px;
+    font-family: "Jost", sans-serif;
+     font-size: 0.8rem;
+    outline: none;
+    padding: 5px 10px 0 10px;
+
+    background-color: rgba(223, 223, 223, 0);
+
+}
+.contact_div121_1 .contact-textarea.true{
+    border-bottom: 1px solid rgb(216, 58, 58);
+
+}
+.contact_div121_1>button{
+    width: fit-content;
+    width: 120px;
+    height:40px;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    border: none;
+}
+.contact_needhlp{
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Jost", sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+
+}
+.contact_div111{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding-bottom: 5rem;
+ border-bottom: 1px solid rgba(128, 128, 128, 0.348);
+}
+.contact_div111>button{
+    margin-top: 2rem;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #627f89;
+    color: rgb(239, 236, 236);
+}
+.loading-spinnerca{
+        animation: spin 1s linear infinite; /* Create spin animation */
+        color: #ffffff; /* Set a color for the spinner */
+      }
+      
+      /* Keyframes for the spin animation */
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    
+@media only screen and (max-width: 480px) {
+    .contact_div121_1>input{
+        width: 80vw;
+        height: 40px;
+        border-radius: 5px;
+    }
+    .contact_div121_1>textarea{
+        width: 80vw;
+        border-radius: 5px;
+    
+       
+    }
+    .contact_div12>h1{
+        font-size: 1.5rem;
+    }
+    .contact_div12>p{
+        font-size: 1rem;
+    }
+    .fontsaligh{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        font-size: calc(0.7rem + 2vw);
+        margin-top: calc(0.5rem + 1.5vw);
+        color: rgb(44, 44, 44);
+    }
+
+}
