@@ -1,0 +1,62 @@
+.arrow_div>button {
+    padding: 0.7rem 1.1rem;
+    padding-left: 2rem;
+    font-size: calc(0.015rem + 0.8vw);
+    font-weight: 500;
+    font-family: "Jost", sans-serif;
+
+    letter-spacing: 0.8px;
+    border-radius: 2rem; 
+    border: none;
+    display: flex;
+    color: rgb(47, 9, 58);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: none;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    text-decoration: none;
+
+  }
+  .arrow_txt{
+    z-index: -1;
+    padding-left: 5px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    translate: -20px;
+    overflow: hidden;
+    background-color: white;
+
+
+  
+  }
+  .arrow_txt.true{
+    z-index: 1;
+    opacity: 100%;
+    translate: 0;
+    background-color: white;
+
+  }
+  .arrow_div> button:hover {
+    scale: 105%;
+    opacity: 100%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+  }
+  .arrow_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 480px) {
+    .arrow_div>button {
+      padding: 0.7rem 1rem;
+      padding-left: 0.7rem;
+      font-size: 10px;
+      padding-left: 2rem;
+    }
+  }

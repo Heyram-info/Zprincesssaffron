@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Riviera Nights';
+  src: url('./fonts/RivieraNightsTrial-Ultralight.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Riviera Nights';
+}
+
+h2 {
+  font-family: 'Riviera Nights';
+}
+
+p {
+  font-family: 'Riviera Nights';
+  overflow: hidden;
+
+  text-transform: capitalize;
+}
+
+h5 {
+  font-family: 'Riviera Nights';
+
+}
+
+@media only screen and (max-width: 480px) {
+  p {
+    font-weight: bold;
+  }
+}
+
+
+/* .tailwind-container {
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+} */

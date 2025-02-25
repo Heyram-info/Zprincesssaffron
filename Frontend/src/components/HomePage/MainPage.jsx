@@ -5,8 +5,6 @@ import Navbar from "../../navbar/NavBar";
 import Footer from "../../footer/Footer";
 import { useUserContext } from "../../context/MainContext";
 import LoginHover from "../../navbar/LoginHover";
-// import { GrNext } from "react-icons/gr";
-// import { motion } from 'framer-motion';
 import gsap from 'gsap'; 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import NewsLetter from './NewsLetter'
@@ -15,12 +13,8 @@ import SideBar from '../sidebar/SideBar'
 import { useNavigate } from 'react-router-dom'
 import MenuSlider from '../sidebar/MenuSlider'
 import ProfileHover from '../../navbar/ProfileHover'
-// import Review from '../review/Review'
 import Arrowbtn from '../button/Arrowbtn'
 import FinalProduct from '../product/FinalProduct'
-// import Cursor from './Cursor'
-// import ReactSlick from '../product/ReactSlick'
-// import RecommenderTest from "./RecommenderTest";
 import { userContext } from "../../context/UserContext";
 
 gsap.registerPlugin(ScrollTrigger); 
