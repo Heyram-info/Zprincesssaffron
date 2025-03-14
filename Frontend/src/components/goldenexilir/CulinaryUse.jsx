@@ -1,224 +1,195 @@
-import React, { useEffect, useState } from 'react'
-
-import '../../styles/CulinaryUse.css'
-import culinaryback from "../../images/culinarymainnew.jpeg"
-import Navbar from '../../navbar/NavBar';
-import Footer from '../../footer/Footer'
-import { culinaryUsesData } from './CulinaryData';
-import SideBar from '../sidebar/SideBar';
-import MenuSlider from '../sidebar/MenuSlider';
-import { useUserContext } from '../../context/MainContext';
-import ScrollToTop from '../ScrollToTop';
-function CulinaryUse() { 
-    const { setShowNav,setSideBar,setMenuSlider }=useUserContext()
-    const [dish,setDish]=useState('biryani')
- 
-    function handleDish(val){
-        setDish(val) 
-    }
-
- 
-    useEffect(() => {
-        setMenuSlider(false)
-        setSideBar(false)
-        setShowNav(true)
-       
-      }, [])
-
-   
-      
+import React, { useEffect, useState } from "react";
+import "../../styles/CulinaryUse.css";
+import culinaryback from "../../images/culinarymainnew.jpeg";
+import Navbar from "../../navbar/NavBar";
+import Footer from "../../footer/Footer";
+import { culinaryUsesData } from "./CulinaryData";
+import SideBar from "../sidebar/SideBar";
+import MenuSlider from "../sidebar/MenuSlider";
+import { useUserContext } from "../../context/MainContext";
+import ScrollToTop from "../ScrollToTop";
 
 
-  return (
-    <>
-      <div>
-        <ScrollToTop/>
-  <Navbar/>
-        <SideBar/>
-        <MenuSlider/>
-    <div className='culinarymain'>
-      
-        <div className='culinary_div1' style={{backgroundImage:`url(${culinaryback})`}}> 
-            <div className='culinary_div11'>
-                <h1>CULINARY USES</h1>
-            </div>
-        </div>
-        <div>
-        <div className={`culinary_div2 ${dish}`}>
-        <div className='culinary_div21'>
-                <h1 onClick={()=>handleDish('biryani')} className={`culinary_div21-h1 ${dish=='biryani'?"true":""}`}>BIRYANI</h1>
-                <h1 onClick={()=>handleDish('pilafs')}  className={`culinary_div21-h1 ${dish=='pilafs'?"true":""}`}>PILAF</h1>
-                <h1 onClick={()=>handleDish('stew')}  className={`culinary_div21-h1 ${dish=='stew'?"true":""}`}>STEWS</h1>
-                <h1 onClick={()=>handleDish('icecream')}  className={`culinary_div21-h1 ${dish=='icecream'?"true":""}`}>ICECREAM</h1>
-                <h1 onClick={()=>handleDish('gulab')}  className={`culinary_div21-h1 ${dish=='gulab'?"true":""}`}>GULAB JAMUN</h1>
-
-            </div>
-        </div>
-        </div>
-       
-        {/* ////////////<- s plitting -> /////////////// */}
-       {dish =="biryani" &&(
-        <>
-         <div className='culinary_div3'>
-            <div className='culinary_div31'>
-                <h1>{culinaryUsesData[0].title}</h1>
-                <p>Saffron enhances Biryani with its rich flavor and vibrant color.</p>
-            </div>
-            <div className='culinary_div32'>
-              
-                <p> <span className='medicinal_highlighter'>flavor: </span>{culinaryUsesData[0].flavor}</p>
-                <p> <span className='medicinal_highlighter'>Aroma: </span>{culinaryUsesData[0].aroma}</p>
-
-                <p> <span className='medicinal_highlighter'>color: </span>{culinaryUsesData[0].color}</p>
-            </div>
-
-        </div>
-        <div className='culinary_div4'>
-            <h1>HOW TO USE SAFFRON IN BIRYANI</h1>
-            <p> <span className='medicinal_highlighter'>Infusion: </span>{culinaryUsesData[0].Infusion}</p>
-            <p> <span className='medicinal_highlighter'>Layering: </span>{culinaryUsesData[0].layering}</p>
-            <p> <span className='medicinal_highlighter'>Quantity: </span>{culinaryUsesData[0].quantity}</p>
-            </div>
-        <div className='culinary_div5'>
-            <h1>TIPS</h1>
-            <p><span className='medicinal_highlighter'>Quality: </span>{culinaryUsesData[0].quality}</p>
-            <h2>Avoid Overuse</h2>
-            <p className='avoid_overcuse'>{culinaryUsesData[0].avoidovercuse}</p>
-            </div>
-        </>
-       )} 
-
-{dish =="pilafs" &&(
-        <>
-         <div className={`culinary_div3 ${dish}`}>
-            <div className='culinary_div31'>
-                <h1>{culinaryUsesData[1].title}</h1>
-                <p>Saffron plays a significant role in pilafs, adding both flavor and visual appeal.</p>
-            </div>
-            <div className='culinary_div32'>
-            <p> <span className='medicinal_highlighter'>flavor: </span>{culinaryUsesData[1].flavor}</p>
-                <p> <span className='medicinal_highlighter'>Aroma: </span>{culinaryUsesData[1].aroma}</p>
-
-                <p> <span className='medicinal_highlighter'>color: </span>{culinaryUsesData[1].color}</p>
-            </div>
-
-        </div>
-        <div className={`culinary_div4 ${dish}`}>
-        <h1>HOW TO USE SAFFRON IN Pilaf</h1>
-        <p> <span className='medicinal_highlighter'>Infusion: </span>{culinaryUsesData[1].Infusion}</p>
-            <p> <span className='medicinal_highlighter'>Incorporation: </span>{culinaryUsesData[1].Incorporation}</p>
-            <p> <span className='medicinal_highlighter'>Quantity: </span>{culinaryUsesData[1].quantity}</p>
-            </div>
-            <div className={`culinary_div5 ${dish}`}>
-            <h1>TIPS</h1>
-            <p><span className='medicinal_highlighter'>Quality: </span>{culinaryUsesData[1].quality}</p>
-
-            <h2>Avoid Overuse</h2>
-            <p>{culinaryUsesData[1].avoidovercuse}</p>
-            </div>
-        </>
-       )}
-
-{dish =="stew" &&(
-        <>
-         <div className={`culinary_div3 ${dish}`}>
-         <div className='culinary_div31'>
-                <h1>{culinaryUsesData[2].title}</h1>
-                <p>Saffron can add a unique depth to stews, enhancing both flavor and color.</p>
-            </div>
-            <div className='culinary_div32'>
-            <p> <span className='medicinal_highlighter'>Flavor: </span>{culinaryUsesData[2].flavor}</p>
-                <p> <span className='medicinal_highlighter'>Aroma: </span>{culinaryUsesData[2].aroma}</p>
-
-                <p> <span className='medicinal_highlighter'>Color: </span>{culinaryUsesData[2].color}</p>
-               
-            </div>
-
-        </div>
-        <div className={`culinary_div4 ${dish}`}>
-        <h1>HOW TO USE SAFFRON IN stew</h1>
-        <p> <span className='medicinal_highlighter'>Infusion: </span>{culinaryUsesData[2].Infusion}</p>
-            <p> <span className='medicinal_highlighter'>Incorporation: </span>{culinaryUsesData[2].Incorporation}</p>
-            <p> <span className='medicinal_highlighter'>Quantity: </span>{culinaryUsesData[2].quantity}</p>
-            </div>
-            <div className={`culinary_div5 ${dish}`}>
-            <h1>TIPS</h1>
-            <p><span className='medicinal_highlighter'>Quality: </span>{culinaryUsesData[2].quality}</p>
-
-            <h2>Avoid Overuse</h2>
-            <p>{culinaryUsesData[2].avoidovercuse}</p>
-            </div>
-        </>
-       )}
-
-{dish =="icecream" &&(
-        <>
-         <div className={`culinary_div3 ${dish}`}>
-         <div className='culinary_div31'>
-                <h1>{culinaryUsesData[3].title}</h1>
-                <p>Saffron-infused ice cream is a luxurious treat that benefits from saffron in several ways.</p>
-            </div>
-            <div className='culinary_div32'>
-            <p> <span className='medicinal_highlighter'>flavor: </span>{culinaryUsesData[3].flavor}</p>
-                <p> <span className='medicinal_highlighter'>Aroma: </span>{culinaryUsesData[3].aroma}</p>
-
-                <p> <span className='medicinal_highlighter'>color: </span>{culinaryUsesData[3].color}</p>
-            </div>
-
-        </div>
-        <div className={`culinary_div4 ${dish}`}>
-        <h1>HOW TO USE SAFFRON IN ICecream</h1>
-        <p> <span className='medicinal_highlighter'>Incorporation: </span>{culinaryUsesData[3].Incorporation}</p>
-            <p> <span className='medicinal_highlighter'>Layering: </span>{culinaryUsesData[3].layering}</p>
-            <p> <span className='medicinal_highlighter'>Quantity: </span>{culinaryUsesData[3].quantity}</p>
-            </div>
-            <div className={`culinary_div5 ${dish}`}>
-            <h1>TIPS</h1>
-            <p><span className='medicinal_highlighter'>Quality: </span>{culinaryUsesData[3].quality}</p>
-            <p><span className='medicinal_highlighter'>balance: </span>{culinaryUsesData[3].balance}</p>
-            </div>
-        </>
-       )}
-
-{dish =="gulab" &&(
-        <>
-         <div className={`culinary_div3 ${dish}`}>
-         <div className='culinary_div31'>
-                <h1>{culinaryUsesData[4].title}</h1>
-                <p>Saffron plays a special role in gulab jamun, a popular Indian sweet made from milk solids and sugar. </p>
-            </div>
-            <div className='culinary_div32'>
-            <p> <span className='medicinal_highlighter'>flavor: </span>{culinaryUsesData[4].flavor}</p>
-                <p> <span className='medicinal_highlighter'>Aroma: </span>{culinaryUsesData[4].aroma}</p>
-
-                <p> <span className='medicinal_highlighter'>color: </span>{culinaryUsesData[4].color}</p>
-            </div>
-
-        </div>
-        <div className={`culinary_div4 ${dish}`}>
-        <h1>HOW TO USE SAFFRON IN gulab jamun</h1>
-        <p> <span className='medicinal_highlighter'>Infusion: </span>{culinaryUsesData[4].Infusion}</p>
-            <p> <span className='medicinal_highlighter'>Incorporation: </span>{culinaryUsesData[4].Incorporation}</p>
-            <p> <span className='medicinal_highlighter'>Quantity: </span>{culinaryUsesData[4].quantity}</p>
-            </div>
-            <div className={`culinary_div5 ${dish}`}>
-            <h1>TIPS</h1>
-            <p><span className='medicinal_highlighter'>Quality: </span>{culinaryUsesData[4].quality}</p>
-
-            <h2>Avoid Overuse</h2>
-            <p>{culinaryUsesData[4].avoidovercuse}</p>
-            </div>
-        </>
-       )}
-
-       
-    </div>
+function CulinaryUse() {
+    const useCases = ["biryani", "pilaf", "Stews", "IceCream", "GulabJamun"];
+    const [currentUseCaseIndex, setCurrentUseCaseIndex] = useState(0);
+    const { setShowNav, setSideBar, setMenuSlider } = useUserContext();
   
-    </div>
-    <Footer/>
+    useEffect(() => {
+      setMenuSlider(false);
+      setSideBar(false);
+    }, []);
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        if (window.scrollY > 300) {
+          setShowNav(true);
+        } else {
+          setShowNav(false);
+        }
+      };
+  
+      window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentUseCaseIndex((prevIndex) => (prevIndex + 1) % useCases.length);
+      }, 3000);
+      return () => clearInterval(interval);
+    }, []);
+  
+    const currentUseCase = useCases[currentUseCaseIndex];
+  
+    const content = {
+        biryani: {
+        title: "biryani",
+        description:
+          "Saffron adds a unique and subtle flavor to biryani. It has a slightly sweet, earthy taste that enhances the overall flavor profile of the dish.",
+        sections: [
+          {
+            heading: "aroma",
+            text: "The aroma of saffron is distinct and can elevate the biryani with its warm, floral notes. This fragrance is often one of the first things people notice.",
+          },
+          {
+            heading: "color",
+            text: "Saffron imparts a vibrant golden-yellow color to the rice and meat in the biryani. This color is visually appealing and contributes to the dish's richness and elegance.",
+          },
+          {
+            heading: "Infusion",
+            text: "Saffron threads are typically steeped in warm milk or water before being added to the biryani. This helps release the color and flavor. Just a few threads are usually enough to achieve the desired effect.",
+          },
+          {
+            heading: "Avoid Overuse",
+            text: "Too much saffron can overpower the dish. Stick to a small quantity to maintain a balanced flavor.",
+          },
+        ],
+      },
+      pilaf: {
+        title: "pilaf",
+        description:
+          "Saffron contributes a subtle, complex flavor to pilaf. Its unique, slightly sweet and earthy taste complements the other ingredients, adding depth and richness.",
+        sections: [
+          {
+            heading: "Aroma",
+            text: "The delicate, floral aroma of saffron can transform the aroma profile of a pilaf, making it more fragrant and inviting.",
+          },
+          {
+            heading: "Color",
+            text: "Saffron imparts a warm golden-yellow hue to the rice in pilaf. This vibrant color enhances the visual appeal of the dish, making it look more appetizing and elegant.",
+          },
+          {
+            heading: "Infusion",
+            text: "Before adding saffron to your pilaf, steep the threads in a small amount of warm water or broth. This helps release the color and flavor. A few threads are usually sufficient for a pot of pilaf.",
+          },
+          {
+            heading: "Avoid Overuse",
+            text: "Since saffron is intense, a little goes a long way. Using too much can overpower the dish.",
+          },
+        ],
+      },
+      Stews: {
+        title: "Stews",
+        description:
+          "Saffron introduces a subtle, complex taste to stews. Its delicate, slightly sweet, and earthy notes can enhance the overall flavor profile, complementing the other ingredients in the stew.",
+        sections: [
+          {
+            heading: "Aroma",
+            text: "The floral and warm aroma of saffron can make stews more fragrant and appealing. It adds a layer of richness that can elevate the dish’s sensory experience.",
+          },
+          {
+            heading: "Color",
+            text: "Saffron imparts a golden-yellow hue to stews, giving them a visually appealing and rich appearance. This color can make the stew look more vibrant and appetizing.",
+          },
+          {
+            heading: "Infusion",
+            text: "To get the most out of saffron, steep the threads in a small amount of hot water or broth before adding them to the stew. This process helps to release the color and flavor. A pinch of saffron is usually sufficient for most stews.",
+          },
+          {
+            heading: "Avoid Overuse",
+            text: "Since saffron is strong, using too much can overpower the stew. Stick to a small quantity to maintain balance.",
+          },
+        ],
+      },
+      IceCream: {
+        title: "Saffron Infused Ice-cream",
+        description:
+          "Saffron imparts a unique, slightly sweet, and earthy flavor to ice cream. This complex taste can add depth and sophistication, making the ice cream stand out from more traditional flavors.",
+        sections: [
+          {
+            heading: "Aroma",
+            text: "Saffron adds a floral, warm aroma to ice cream. This pleasant scent can enhance the sensory experience, making each bite more aromatic and inviting.",
+          },
+          {
+            heading: "Color",
+            text: "Saffron infuses a beautiful golden-yellow hue into the ice cream. This vibrant color makes the ice cream visually striking and adds an element of elegance.",
+          },
+          {
+            heading: "Infusion",
+            text: "Start by steeping saffron threads in a small amount of warm milk or cream. This helps to release the color and flavor. Let it sit for about 10-15 minutes.",
+          },
+          {
+            heading: "Avoid Overuse",
+            text: "Ensure that the saffron flavor complements the other ingredients in the ice cream. It should enhance the overall taste without overpowering it.",
+          },
+        ],
+      },
+      GulabJamun: {
+        title: "Gulab Jamun",
+        description:
+          "Saffron adds a subtle, exotic flavor to gulab jamun. Its unique, slightly sweet, and earthy notes enhance the overall taste of the dessert, giving it a refined touch.",
+        sections: [
+          {
+            heading: "Aroma",
+            text: "Saffron imparts a warm, floral aroma that elevates the sensory experience of gulab jamun. This aroma makes the dessert more inviting and enhances its appeal.",
+          },
+          {
+            heading: "Color",
+            text: "Saffron infuses a beautiful golden hue into the syrup or the dough of gulab jamun. This vibrant color not only adds elegance to the dessert but also visually signifies its luxurious flavor.",
+          },
+          {
+            heading: "Infusion",
+            text: "Soak saffron threads in a small amount of warm milk or water to release their color and flavor. Let it steep for about 10-15 minutes.",
+          },
+          {
+            heading: "Avoid Overuse",
+            text: "Since saffron is potent, using too much can overpower the dessert. Stick to a small quantity to maintain balance.",
+          },
+        ],
+      },
+    };
+  
+    return (
+      <div className="bg-cyan-100">
+        <ScrollToTop />
+        <Navbar />
+        <SideBar />
+        <MenuSlider />
+        <div
+          className="culinary_div1"
+          style={{ backgroundImage: `url(${culinaryback})` }}
+        >
+          <div className="culinary_div11">
+            <h1>CULINARY USES</h1>
+          </div>
+        </div>
+        <div className={`mu_div1 pt-10 rounded-3xl m-20 bg-[#E7FFF8] ${currentUseCase}`}>
+          <h1>{content[currentUseCase].title}</h1>
+          <p>{content[currentUseCase].description}</p>
+          {content[currentUseCase].sections.map((section, index) => (
+            <div key={index}>
+              <h1>{section.heading}</h1>
+              <p>{section.text}</p>
+            </div>
+          ))}
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
-           </>
-  )
-}
-
-export default CulinaryUse
+export default CulinaryUse;
