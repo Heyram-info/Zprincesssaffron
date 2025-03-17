@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
-import { products } from "../../data/Productdata.js";
+import { products } from "../data/Productdata.js";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaShoppingCart } from 'react-icons/fa'; // Import Cart icon

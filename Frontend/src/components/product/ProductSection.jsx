@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import { products } from "../../data/Productdata.js";
+import { products } from "../data/Productdata.js";
 import CartIcon from "./CartIcon";
 import CartModal from "../../components/product/CartModel.jsx";
 import { motion, useAnimation } from "framer-motion";
