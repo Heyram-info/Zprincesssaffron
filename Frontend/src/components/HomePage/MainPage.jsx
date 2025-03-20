@@ -265,6 +265,36 @@ function MainPageTrial() {
           </div>
         </div>
       </div>
+
+      {/* <div className="bg-white py-16 px-4 md:px-8 lg:px-16">
+      <div className="text-center text-2xl md:text-3xl font-bold text-gray-800 uppercase tracking-wide">
+        WHAT SETS US APART
+      </div>
+      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h1 className="text-xl font-semibold text-gray-900">Transparency</h1>
+          <p className="mt-2 text-gray-700">
+            We provide detailed information about the origin and processing of
+            our saffron, so you know exactly what you're buying.
+          </p>
+        </div>
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h1 className="text-xl font-semibold text-gray-900">Innovation</h1>
+          <p className="mt-2 text-gray-700">
+            We continuously explore new ways to enhance the quality and
+            usability of our saffron, ensuring we stay ahead of the market.
+          </p>
+        </div>
+        <div className="bg-gray-100 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+          <h1 className="text-xl font-semibold text-gray-900">Passion</h1>
+          <p className="mt-2 text-gray-700">
+            Our passion for saffron drives us to maintain the highest
+            standards and share this incredible spice with the world.
+          </p>
+        </div>
+      </div>
+    </div> */}
+
       <div className='footer_plus'>
         <NewsLetter />
       </div>

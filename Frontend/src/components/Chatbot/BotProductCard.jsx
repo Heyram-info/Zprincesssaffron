@@ -10,7 +10,7 @@ const BotProductCard = ({ product }) => {
   };
 
   return (
-    <div className="product-card" onClick={handleClick}>
+    <div className="product-card overflow-hidden" onClick={handleClick}>
       <div className="product-image">
         <img
           src={product.img}
@@ -18,9 +18,9 @@ const BotProductCard = ({ product }) => {
           className="image-content"
         />
       </div>
-      <div className="product-info">
+      <div className="product-info overflow-hidden text-[0.5rem] uppercase tracking-widest text-center">
         <div className="product-name">{product.name}</div>
-        <div className="product-overlay">
+        <div className="product-overlay text-[0.65rem] tracking-widest">
           Click to Know more
         </div>
       </div>

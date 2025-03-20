@@ -7,11 +7,13 @@ import { useUserContext } from "../../context/MainContext";
 import SideBar from "../sidebar/SideBar";
 import MenuSlider from "../sidebar/MenuSlider";
 import ScrollToTop from "../ScrollToTop";
+import { FaPlay, FaPause, FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function MedicinalUse() {
   const useCases = ["depression", "health", "pain", "digestive"];
   const [currentUseCaseIndex, setCurrentUseCaseIndex] = useState(0);
   const { setShowNav, setSideBar, setMenuSlider } = useUserContext();
+  const [isPlaying, setIsPlaying] = useState(true);
 
   useEffect(() => {
     setMenuSlider(false);
@@ -20,26 +22,33 @@ function MedicinalUse() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 300) {
-        setShowNav(true);
-      } else {
-        setShowNav(false);
-      }
+      setShowNav(window.scrollY > 300);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   useEffect(() => {
+    if (!isPlaying) return;
     const interval = setInterval(() => {
       setCurrentUseCaseIndex((prevIndex) => (prevIndex + 1) % useCases.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isPlaying, currentUseCaseIndex]);
+
+  const togglePlayPause = () => setIsPlaying((prev) => !prev);
+
+  const prevUseCase = () => {
+    setCurrentUseCaseIndex((prevIndex) =>
+      prevIndex === 0 ? useCases.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextUseCase = () => {
+    setCurrentUseCaseIndex((prevIndex) => (prevIndex + 1) % useCases.length);
+  };
 
   const currentUseCase = useCases[currentUseCaseIndex];
 
@@ -148,7 +157,32 @@ function MedicinalUse() {
           <h1>MEDICINAL USES</h1>
         </div>
       </div>
-      <div className={`mu_div1 pt-10 rounded-3xl m-20 ${currentUseCase}`}>
+      <div
+        className={`mu_div1 relative pt-10 rounded-3xl m-20 shadow-lg p-6 ${currentUseCase}`}
+      >
+        {/* Left Arrow */}
+        <button
+          onClick={prevUseCase}
+          className="absolute left-4 top-8 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+        >
+          <FaArrowLeft size={10} />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={nextUseCase}
+          className="absolute left-20 top-8 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+        >
+          <FaArrowRight size={10} />
+        </button>
+
+        {/* Play/Pause Button */}
+        <button
+          onClick={togglePlayPause}
+          className="absolute top-4 right-4 bg-white p-2 rounded-full shadow-lg hover:bg-gray-100 transition"
+        >
+          {isPlaying ? <FaPause size={10} /> : <FaPlay size={10} />}
+        </button>
         <h1>{content[currentUseCase].title}</h1>
         <p>{content[currentUseCase].description}</p>
         {content[currentUseCase].sections.map((section, index) => (

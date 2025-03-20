@@ -6,7 +6,7 @@ function NewsLetter() {
                <div className='nwsletter_container'>
              <div className='sub_txt'>SUBSCRIBE TO OUR NEWSLETTER</div>
         <div className='newsletter_container'>
-            <input type="text" placeholder='Email Address' /><button>SUBSCRIBE</button>
+            <input type="text" placeholder='Email Address' /><button className='tracking-widest text-semibold text-sm'>SUBSCRIBE</button>
         </div>
         </div>
     </div>

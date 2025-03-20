@@ -4,6 +4,10 @@ import "../../styles/FinalProduct.css";
 import { CartContext } from "../../context/CartContext";
 import { useUserContext } from "../../context/MainContext";
 import axios from "axios";
+import image from "../../assets/Images/saffron-1.jpg"
+import flipimage from "../../assets/Images/saffron-2.jpg"
+import image2 from "../../assets/Images/saffron-3.jpg"
+import flipimage2 from "../../assets/Images/saffron-4.jpg"
 
 const FinalProduct = () => {
   const [products, setProducts] = useState([]);
@@ -25,8 +29,8 @@ const FinalProduct = () => {
           weight: data[0].variants[0].weight,
           fullProduct: data[0],
           stock: data[0].variants[0].stock,
-          image: data[0].variants[0].img1,
-          flipimage: data[0].variants[0].img2,
+          image: data[0].variants[0].img1 || image,
+          flipimage: data[0].variants[0].img2 || flipimage,
         },
         {
           _id: data[0]._id + "-1", // Unique ID for variant 2 of product 1
@@ -35,8 +39,8 @@ const FinalProduct = () => {
           weight: data[0].variants[1].weight,
           fullProduct: data[0],
           stock: data[0].variants[1].stock,
-          image: data[0].variants[1].img1,
-          flipimage: data[0].variants[1].img2,
+          image: data[0].variants[1].img1 || image2,
+          flipimage: data[0].variants[1].img2 || flipimage2,
         },
         {
           _id: data[1]._id + "-0", // Unique ID for variant 1 of product 2
@@ -45,8 +49,8 @@ const FinalProduct = () => {
           weight: data[1].variants[0].weight,
           fullProduct: data[1],
           stock: data[1].variants[0].stock,
-          image: data[1].variants[0].img1,
-          flipimage: data[1].variants[0].img2,
+          image: data[1].variants[0].img1 || image,
+          flipimage: data[1].variants[0].img2 || flipimage,
         },
         {
           _id: data[1]._id + "-1", // Unique ID for variant 2 of product 2
@@ -55,8 +59,8 @@ const FinalProduct = () => {
           weight: data[1].variants[1].weight,
           fullProduct: data[1],
           stock: data[1].variants[1].stock,
-          image: data[1].variants[1].img1,
-          flipimage: data[1].variants[1].img2,
+          image: data[1].variants[1].img1 || image2,
+          flipimage: data[1].variants[1].img2 || flipimage2,
         },
       ];
       setProducts(splitProducts);

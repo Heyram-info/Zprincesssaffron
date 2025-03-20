@@ -22,7 +22,7 @@ const DashboardLayout = () => {
     email: '',
     phone: '',
   });
-
+console.log(personalInfo)
   useEffect(() => {
     // Fetch the user profile data from the backend
     const fetchProfile = async () => {
