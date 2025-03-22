@@ -5,25 +5,22 @@ import { Bar } from 'react-chartjs-2';
 ChartJS.register(CategoryScale, LinearScale, BarElement, LineElement, PointElement, Title, Tooltip, Legend);
 
 const SalesComparison = ({ labels, revenueValues, salesValues }) => {
-  const [selectedYear, setSelectedYear] = useState('2024'); // Default year
-  const [comparisonType, setComparisonType] = useState(''); // '' for no comparison, 'monthly', 'quarterly', etc.
-  const [compareYear1, setCompareYear1] = useState(''); // First year for comparison
-  const [compareYear2, setCompareYear2] = useState(''); // Second year for comparison
+  const [selectedYear, setSelectedYear] = useState('2024');
+  const [comparisonType, setComparisonType] = useState('');
+  const [compareYear1, setCompareYear1] = useState('');
+  const [compareYear2, setCompareYear2] = useState('');
 
-  // Prepare data
   const data = labels.map((label, index) => {
     const [month, year] = label.split(' ');
     return { month, year, revenue: revenueValues[index], sales: salesValues[index] };
   });
 
-  // Filter data for selected year(s)
   const filteredData = data.filter(
     (item) =>
       (!compareYear1 && !compareYear2 && item.year === selectedYear) ||
       (compareYear1 && compareYear2 && (item.year === compareYear1 || item.year === compareYear2))
   );
 
-  // Group data by interval
   const groupData = (interval) => {
     switch (interval) {
       case 'monthly':
@@ -62,7 +59,6 @@ const SalesComparison = ({ labels, revenueValues, salesValues }) => {
     }
   };
 
-  // Generate chart data
   const generateChartData = (interval) => {
     const groupedData = groupData(interval);
     const labels = groupedData.map((item) => item.label);
@@ -96,7 +92,7 @@ const SalesComparison = ({ labels, revenueValues, salesValues }) => {
           backgroundColor: 'rgba(255, 99, 132, 0.2)',
           fill: false,
           borderWidth: 2,
-          tension: 0.3, // Adds a curve to the line
+          tension: 0.3,
         },
         {
           label: 'Sales Trend (Line)',
@@ -111,85 +107,56 @@ const SalesComparison = ({ labels, revenueValues, salesValues }) => {
       ],
     };
   };
+
   const years = [...new Set(labels.map((label) => label.split(' ')[1]))];
 
   return (
-    <div>
-      <h2>Sales and Revenue Comparison</h2>
+    <div className="p-6 bg-white rounded-lg shadow-md">
+      <h2 className="text-xl font-semibold text-gray-700">Sales and Revenue Comparison</h2>
 
-      {/* Year Selection */}
-      <div>
-        <label htmlFor="year-select">Select Year: </label>
-        <select
-          id="year-select"
-          value={selectedYear}
-          onChange={(e) => setSelectedYear(e.target.value)}
-          disabled={compareYear1 && compareYear2}
-        >
-          {years.map((year) => (
-            <option key={year} value={year}>
-              {year}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* Year Comparison */}
-      <div>
-        <h4>Compare Years:</h4>
-        <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-          <label htmlFor="compare-year1">Year 1:</label>
-          <select
-            id="compare-year1"
-            value={compareYear1}
-            onChange={(e) => setCompareYear1(e.target.value)}
-          >
-            <option value="">-- Select Year --</option>
+      <div className="mt-4 space-y-4">
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Select Year:</label>
+          <select className="w-full p-2 border rounded-md" value={selectedYear} onChange={(e) => setSelectedYear(e.target.value)} disabled={compareYear1 && compareYear2}>
             {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
+              <option key={year} value={year}>{year}</option>
             ))}
           </select>
+        </div>
 
-          <label htmlFor="compare-year2">Year 2:</label>
-          <select
-            id="compare-year2"
-            value={compareYear2}
-            onChange={(e) => setCompareYear2(e.target.value)}
-          >
-            <option value="">-- Select Year --</option>
-            {years.map((year) => (
-              <option key={year} value={year}>
-                {year}
-              </option>
-            ))}
+        <div>
+          <h4 className="text-sm font-medium text-gray-700">Compare Years:</h4>
+          <div className="flex space-x-4">
+            <select className="w-1/2 p-2 border rounded-md" value={compareYear1} onChange={(e) => setCompareYear1(e.target.value)}>
+              <option value="">-- Select Year --</option>
+              {years.map((year) => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
+            <select className="w-1/2 p-2 border rounded-md" value={compareYear2} onChange={(e) => setCompareYear2(e.target.value)}>
+              <option value="">-- Select Year --</option>
+              {years.map((year) => (
+                <option key={year} value={year}>{year}</option>
+              ))}
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label className="block text-sm font-medium text-gray-700">Select Comparison Type:</label>
+          <select className="w-full p-2 border rounded-md" value={comparisonType} onChange={(e) => setComparisonType(e.target.value)}>
+            <option value="">-- Select Comparison Type --</option>
+            <option value="monthly">Monthly</option>
+            <option value="quarterly">Quarterly</option>
+            <option value="half-yearly">Half-Yearly</option>
+            <option value="yearly">Yearly</option>
           </select>
         </div>
       </div>
 
-      {/* Comparison Type */}
-      <div>
-        <label htmlFor="comparison-select">Select Comparison Type: </label>
-        <select
-          id="comparison-select"
-          value={comparisonType}
-          onChange={(e) => setComparisonType(e.target.value)}
-        >
-          <option value="">-- Select Comparison Type --</option>
-          <option value="monthly">Monthly</option>
-          <option value="quarterly">Quarterly</option>
-          <option value="half-yearly">Half-Yearly</option>
-          <option value="yearly">Yearly</option>
-        </select>
-      </div>
-
-      {/* Render Chart */}
       {comparisonType && (
-        <div>
-          <h3>{`${comparisonType.charAt(0).toUpperCase()}${comparisonType.slice(
-            1
-          )} Comparison`}</h3>
+        <div className="mt-6">
+          <h3 className="text-lg font-semibold">{comparisonType.charAt(0).toUpperCase() + comparisonType.slice(1)} Comparison</h3>
           <Bar data={generateChartData(comparisonType)} />
         </div>
       )}

@@ -159,7 +159,7 @@ const AdminDashboard = () => {
             <MdLocalOffer size={24} className="mr-3" />
             Products
           </Link>
-          <div className="relative">
+          <div className="relative z-10">
             <a
               onClick={toggleUserDropdown}
               className={`flex items-center py-2.5 px-4 rounded-lg transition duration-200 cursor-pointer ${
@@ -224,7 +224,7 @@ const AdminDashboard = () => {
           <Link
               to='/admin/analytics'
             onClick={() => setSelectedCategory("analytics")}
-            className={`flex items-center py-2.5 px-4 rounded-lg transition duration-200 ${
+            className={`flex items-center py-2.5 px-4 rounded-lg transition duration-200 z-10 ${
               selectedCategory === "analytics"
                 ? "bg-indigo-600 text-white"
                 : isDarkMode

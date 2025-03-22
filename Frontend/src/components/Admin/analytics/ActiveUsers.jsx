@@ -8,10 +8,10 @@ const ActiveUsers = ( ) => {
   }, [])
   
   return (
-    <div className="au-container">
-      <div className="au-card">
-        <h2 className="au-heading">Total Users</h2>
-        <p className="au-active-users">{filteredUsers?(filteredUsers.length):users.length}</p>
+    <div className="tailwind-container mt-6">
+    <div  className="p-4 bg-white shadow-lg rounded-lg">
+        <h2 className="text-xl font-bold mb-2">Total Users</h2>
+        <p className="text-3xl font-semibold text-black">{filteredUsers?(filteredUsers.length):users.length}</p>
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ const TotalSales = ({ salesData }) => {
     <div className="tailwind-container">
     <div  className="p-4 bg-white shadow-lg rounded-lg">
       <h2 className="text-xl font-bold mb-2">Total Sales</h2>
-      <p className="text-3xl font-semibold">₹{revenueData.values.reduce((acc, curr) => acc + curr, 0)}</p>
+      <p className="text-3xl font-semibold text-black">₹{revenueData.values.reduce((acc, curr) => acc + curr, 0)}</p>
     </div>
    </div>
   );
