@@ -9,7 +9,7 @@ import { CartProvider } from "./context/CartContext";
 import ContactUs from "./contactus/ContactUs";
 import TermsAndConditions from "./termsandcondition/TermsAndConditions";
 import PrivacyPolicy from "./privacypolicy/PrivacyPolicy";
-import CancellationAndRefundPolicy from "./CancellationAndRefundPolicy/CancellationAndRefundPolicy";
+import CancellationAndRefundPolicy from "./cancellationAndRefundPolicy/CancellationAndRefundPolicy.jsx";
 import ShippingAndDeliveryPolicy from "./shippingAndDeliveryPolicy/ShippingAndDeliveryPolicy";
 import Faq from "./Faq/Faq";
 import Insight from "./insight/Insight";
