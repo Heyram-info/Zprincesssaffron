@@ -10,7 +10,7 @@ dotenv.config();
 
 
 app.use(cors({
-  origin: 'http://localhost:5173', // Your Vercel domain 
+  origin: 'https://zprincesssaffron.vercel.app', // Your Vercel domain 
   credentials: true
 }));
 
