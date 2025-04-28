@@ -171,14 +171,14 @@ function Pregnancy() {
 
       {/* Usage Section */}
       <div className="max-w-6xl mx-auto my-16 p-8 bg-white rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-center text-pink-600 uppercase">Incorporating Saffron Wisely</h1>
+        <h1 className="text-3xl font-bold text-center text-black uppercase">Incorporating Saffron Wisely</h1>
         <div className="mt-8 flex flex-wrap justify-center gap-8">
           {[{ img: saffronmilk1, title: "Saffron Milk", desc: "Add a few strands to warm milk for a soothing drink." },
             { img: saffronfood1, title: "Culinary Uses", desc: "Enhance rice, soups, and desserts with a pinch of saffron." },
           ].map((item, index) => (
             <div key={index} className="max-w-xs p-4 bg-pink-100 rounded-lg shadow-lg text-center">
               <img src={item.img} alt={item.title} className="rounded-lg h-40 mx-auto" />
-              <h2 className="text-md uppercase tracking-widest font-normal text-pink-700 mt-4">{item.title}</h2>
+              <h2 className="text-md uppercase tracking-widest font-normal text-black mt-4">{item.title}</h2>
               <p className="text-gray-700 mt-2 text-sm tracking-wider">{item.desc}</p>
             </div>
           ))}
@@ -186,13 +186,13 @@ function Pregnancy() {
       </div>
 
       {/* Essential Reminders */}
-      <div className="bg-pink-300 py-12 px-6 text-center">
-        <h1 className="text-3xl font-bold text-white uppercase">Essential Reminders</h1>
-        <div className="max-w-4xl mx-auto mt-6 space-y-6 text-white">
+      <div className="bg-pink-100 py-12 px-6 text-center">
+        <h1 className="text-3xl font-bold text-black uppercase">Essential Reminders</h1>
+        <div className="max-w-4xl mx-auto mt-6 space-y-6 text-black">
           {["Not a cure-all: Saffron should complement a healthy diet and medical care.",
             "Be observant: Discontinue use if you experience any allergic reactions.",
           ].map((reminder, index) => (
-            <p key={index} className="bg-white bg-opacity-20 p-4 rounded-lg text-white tracking-widest text-sm">{reminder}</p>
+            <p key={index} className="bg-white bg-opacity-70 p-4 rounded-lg text-black tracking-widest text-sm">{reminder}</p>
           ))}
         </div>
       </div>

@@ -53,7 +53,7 @@ function About() {
       <MenuSlider />
       <section className="relative bg-gradient-to-b from-yellow-100 to-white">
         <div className="mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-yellow-800 tracking-widest transform transition-transform duration-300" style={{ transform: `translateY(${trans}px)` }}>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-black tracking-widest transform transition-transform duration-300" style={{ transform: `translateY(${trans}px)` }}>
             Z PRINCESS SAFFRON
           </h1>
           <img src={bff} alt="Background" className="w-full h-72 mt-6 rounded-lg shadow-lg" />
@@ -62,8 +62,8 @@ function About() {
 
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center">
-          <h2 className="text-xl font-bold text-yellow-900 tracking-widest">WHO WE ARE</h2>
-          <div className="w-16 h-[0.10rem] bg-yellow-600 mx-auto my-4"></div>
+          <h2 className="text-xl font-bold text-black tracking-widest">WHO WE ARE</h2>
+          <div className="w-16 h-[0.10rem] bg-black mx-auto my-4"></div>
           <p className="text-gray-800 text-sm leading-relaxed tracking-wider">
             Z PRINCESS SAFFRON is a distinguished saffron seller located in Chennai, India, dedicated to bringing you the world’s finest saffron. Our saffron is meticulously harvested from the most prestigious regions – Kashmir, Spain, and Iran.
           </p>
@@ -76,7 +76,7 @@ function About() {
             <img src={crocuses} alt="Crocuses" className="rounded-lg shadow-lg" />
           </div>
           <div className="md:w-1/2 text-center md:text-left">
-            <h2 className="text-xl font-bold text-yellow-900 tracking-widest uppercase">Our Commitment</h2>
+            <h2 className="text-xl font-bold text-black tracking-widest uppercase">Our Commitment</h2>
             <p className="text-gray-800 text-sm tracking-wider leading-relaxed mt-4">
               We are passionate about offering an authentic saffron experience. Every thread of saffron you purchase from us is pure, unadulterated, and of the highest standard.
             </p>
@@ -85,8 +85,8 @@ function About() {
       </section>
 
       <section className="max-w-6xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-xl tracking-widest font-bold text-yellow-900">OUR MISSION</h2>
-        <div className="w-16 h-[0.10rem] bg-yellow-600 mx-auto my-4"></div>
+        <h2 className="text-xl tracking-widest font-bold text-black">OUR MISSION</h2>
+        <div className="w-16 h-[0.10rem] bg-black mx-auto my-4"></div>
         <p className="text-gray-800 text-sm tracking-wider leading-relaxed">
           Our mission is to provide our customers with unparalleled service and a product that stands out in terms of quality and authenticity. Trust Z PRINCESS SAFFRON to deliver an exceptional saffron experience.
         </p>

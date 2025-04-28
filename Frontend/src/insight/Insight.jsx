@@ -55,7 +55,7 @@ function Insight() {
           <h1 className="text-5xl font-bold mb-4 text-shadow-lg tracking-widest">
             INSIGHT
           </h1>
-          <p className="text-md mb-6 text-white tracking-widest">
+          <p className="text-md mb-6 text-white tracking-widest font-bold">
             In the delicate petals of saffron, tradition finds its fragrance,
             and life its vibrance.
           </p>
@@ -77,17 +77,17 @@ function Insight() {
         </div>
 
         {/* Card section */}
-        <div className="flex flex-wrap justify-around space-y-8 md:space-y-0 overflow-hidden bg-[#aacbca] text-white p-8 md:p-16 ">
+        <div className="flex flex-wrap justify-around space-y-8 md:space-y-0 overflow-hidden bg-[#aacbca] text-black p-8 md:p-16 ">
           <div className="flex-1 text-center p-4 transition-transform transform hover:scale-105">
             <img
               src={saffrontea}
               alt="Saffron Image 1"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
-            <div className="mt-4 text-xl font-semibold tracking-widest uppercase">
+            <div className="mt-4 text-xl  tracking-widest uppercase">
               Culinary Mastery
             </div>
-            <p className="text-white mt-2 text-sm tracking-wider">
+            <p className="text-black mt-2 text-sm tracking-wider">
               Add a single thread of saffron to your dish, and the moment it
               touches your food, the air fills with a rich, honeyed aroma.
             </p>
@@ -98,10 +98,10 @@ function Insight() {
               alt="Saffron Image 2"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
-            <div className="mt-4 text-lg font-semibold tracking-widest uppercase">
+            <div className="mt-4 text-lg  tracking-widest uppercase">
               Timeless Beauty
             </div>
-            <p className="text-white mt-2 text-sm tracking-wider">
+            <p className="text-black mt-2 text-sm tracking-wider">
               Saffron is cherished for its beauty-enhancing properties, helping
               reduce fine lines and wrinkles, improve skin texture, and impart a
               radiant glow.
@@ -113,10 +113,10 @@ function Insight() {
               alt="Saffron Image 3"
               className="w-full h-64 object-cover rounded-lg shadow-lg"
             />
-            <div className="mt-4 text-lg font-semibold tracking-widest uppercase">
+            <div className="mt-4 text-lg tracking-widest uppercase">
               Holistic Well-Being
             </div>
-            <p className="text-white mt-2 text-sm tracking-wider">
+            <p className="text-black mt-2 text-sm tracking-wider">
               Saffron is celebrated for its remarkable health benefits,
               promoting mood enhancement, stress reduction, and digestive
               support.

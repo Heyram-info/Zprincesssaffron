@@ -301,13 +301,13 @@ function SideBar() {
                 >
                  {isMobile? <>&nbsp;</>:""} KASHMIRI SAFFRON
                 </animated.div>
-                <animated.div
+                {/* <animated.div
                   className="menu-item"
                   onClick={() => navigate("/spain-saffron")}
                   style={itemAnimation1}
                 >
                   {isMobile? <>&nbsp;</>:""}  SPAIN SAFFRON
-                </animated.div>
+                </animated.div> */}
               </>
             )}
             {menuSubItems == "products" && (
@@ -329,13 +329,13 @@ function SideBar() {
                   {" "}
                   {isMobile? <>&nbsp;</>:""}  KASHMIRI SAFFRON
                 </animated.div>
-                <animated.div
+                {/* <animated.div
                   onClick={handleSpain}
                   className="menu-item"
                   style={itemAnimation1}
                 >
                 {isMobile? <>&nbsp;</>:""}   SPAIN SAFFRON
-                </animated.div>
+                </animated.div> */}
               </>
             )}
             {menuSubItems == "kashmir" && (
@@ -366,7 +366,7 @@ function SideBar() {
                 </animated.div>
               </>
             )}
-            {menuSubItems == "spain" && (
+            {/* {menuSubItems == "spain" && (
               <>
                 <animated.div
                   id="sidebar_kh"
@@ -393,7 +393,7 @@ function SideBar() {
                  {isMobile? <>&nbsp;</>:""}  5 GRAMS
                 </animated.div>
               </>
-            )}
+            )} */}
 
             {menuSubItems == "goldenelixir" && (
               <>

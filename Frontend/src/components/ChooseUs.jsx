@@ -47,7 +47,7 @@ function ChooseUs() {
           <motion.h1 className="text-5xl font-semibold tracking-widest" initial={{ y: -50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1 }}>
             OUR SAFFRON
           </motion.h1>
-          <motion.p className="mt-4 text-md text-white tracking-wider max-w-3xl" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.2 }}>
+          <motion.p className="mt-4 text-sm text-white tracking-widest max-w-4xl font-bold" initial={{ y: 50, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ duration: 1.2 }}>
             At Z Princess Saffron, we pride ourselves on offering the highest quality saffron sourced from the renowned regions of Kashmir, Iran, and Spain.
           </motion.p>
         </div>
@@ -65,7 +65,7 @@ function ChooseUs() {
         }].map((section, index) => (
           <motion.div className="flex flex-col md:flex-row items-center px-4 md:px-10" key={index} initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
             <div className={`md:w-1/2 ${index % 2 === 0 ? 'order-2' : 'order-1'} p-6`}>
-              <h1 className="text-xl uppercase tracking-widest font-bold text-orange-800">{section.title}</h1>
+              <h1 className="text-xl uppercase tracking-widest font-bold text-black">{section.title}</h1>
               <p className="mt-4 text-md tracking-wider text-gray-700">{section.content}</p>
             </div>
             <div className="md:w-1/2 order-1 flex justify-center">
@@ -76,14 +76,14 @@ function ChooseUs() {
       </div>
 
       <div className="bg-orange-50 py-16 text-center rounded-3xl mx-10">
-        <h1 className="text-3xl font-semibold uppercase tracking-widest text-orange-800">Versatile Uses</h1>
+        <h1 className="text-3xl font-semibold uppercase tracking-widest text-black">Versatile Uses</h1>
         <div className="flex flex-wrap justify-center gap-10 mt-10">
           {[{ image: cur, title: "Culinary Delights", content: "Enhance flavors with our premium saffron." },
             { image: skincare, title: "Radiant Glow", content: "Boost skin health with antioxidant-rich saffron." },
             { image: tea, title: "Balanced Living", content: "Experience saffron's stress-relief benefits." }].map((item, i) => (
               <motion.div key={i} className="w-72 p-6 bg-white rounded-2xl shadow-md hover:shadow-xl transition-transform transform hover:scale-105 duration-300 ease-in-out" initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
                 <img src={item.image} className="rounded-xl h-40 object-cover w-full" alt={item.title} />
-                <h1 className="text-lg font-semibold uppercase tracking-widest text-orange-700 mt-4">{item.title}</h1>
+                <h1 className="text-lg font-semibold uppercase tracking-widest text-black mt-4">{item.title}</h1>
                 <p className="text-gray-600 text-sm tracking-wide mt-2">{item.content}</p>
               </motion.div>
           ))}
